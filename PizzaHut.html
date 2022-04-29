@@ -9,14 +9,14 @@
 <link rel="stylesheet" href="PizzaHut.css">
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
-<body>
+<body onload="fetchFoods()">
     <header>
         <a href="#" class="logo"><i class="fa fa-drumstick-bite"></i>GetSnack'd</a>
         <nav class="navbar">
             <a class="active" href="./home.html">Home</a>
             <a href="./Popular.html">Popular</a>
-            <a href="#" onclick="fetchFoods()">about</a>
-            <a href="./contact.html" >Contact us</a>
+            <a href="#" onclick="openAbout()">about</a>
+            <a honload="fetchFoods()"ref="./contact.html" >Contact us</a>
            
             <a class="feed" id="feedback">feedback</a>
             <a href="#">Orders</a>
@@ -80,11 +80,14 @@
 <!--Side bar ends-->
 <section class="home" id="home">
     <div class="barb">
-    <h2><img src="./Images/Restaurants/Pizza_Hut_logo.svg.png" height="350"></h2>
-    <div class="cont">
-        <iframe width="923" height="519" src="https://www.youtube.com/embed/BrcpkSBx00M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2><img src="./Images/Restaurants/Pizza_Hut_logo.svg.png" height="350"></h2>
+        <div class="cont">
+            <iframe width="923" height="519" src="https://www.youtube.com/embed/BrcpkSBx00M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        </div>
+        <div id="dbFoods"></div>
+        <label>Filter by Type: </label>
+        <input type="text" oninput="handleFilter(event)"/>
+    </div>
 </section>
 <section class="currys" id="curry">
     <h2 class="barbeque">Pizza Hut</h2>
@@ -127,7 +130,7 @@
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>handleFilter()
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
     
@@ -476,7 +479,7 @@
         <span>Tk 759</span>
         <br>
         <a href="#" class="btn">Add to cart</a>
-    </div>
+    </div>handleFilter()
     <div class="box">
         <img src="./Images/Dishes/pizza/sausage4cheez.jpg">
         <h3>Sausage 4 Cheese</h3>
@@ -683,6 +686,7 @@
         and kitchen products to restaurant partners.<br> We also provide our delivery partners with transparent 
         and flexible earning opportunities. </p>
     </div>
+    
 </div>
 
 
@@ -693,8 +697,9 @@
 
 <!--Java Script-->
     <script>
+        let foodsState = null
         let menu = document.querySelector('#menu-bars');
-let navbar = document.querySelector('.navbar');
+        let navbar = document.querySelector('.navbar');
 
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
@@ -757,19 +762,66 @@ return false;
         document.getElementById("about").style.width = "0%";
     }
 
-
+    
     async function fetchFoods() {
         try {
             const resp = await fetch('http://localhost:8000/api/foods/', {
-                mode: 'no-cors',
+                method: 'GET',
                 header: {
-                    'Access-Control-Allow-Origin':'*',
+                    'Content-Type': 'application/json'
                 }
-            });
-            const data = await resp.json();
-            console.log(resp);
+            })
+            const foods = await resp.json()
+            foodsState = foods
+            const foodElementList = foods.map((food) => {
+                return `
+                <div class="box">
+                    <img src="./Images/Dishes/kachi chicken biryani.jpg">
+                    <h3>${food.food_name}</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>${food.food_price}</span>
+                    <br>
+                    <a href="#" class="btn">Add to cart</a>
+                </div>`
+            })
+            let foodsHTML = foodElementList.join('')
+            document.getElementById("dbFoods").innerHTML += foodsHTML
+            
         } catch (err) {
-            console.log(err);
+            console.log(err)
+        }
+    }
+
+    function handleFilter(event) {
+        if(event.target.value.length <= 0){
+            fetchFoods()
+        } else {
+            document.getElementById("dbFoods").innerHTML = null
+            const foodElementList = foodsState.filter((food) => food.food_type.toLowerCase().includes(event.target.value)).map((food) => {
+                return `
+                <div class="box">
+                    <img src="./Images/Dishes/kachi chicken biryani.jpg">
+                    <h3>${food.food_name}</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>${food.food_price}</span>
+                    <br>
+                    <a href="#" class="btn">Add to cart</a>
+                </div>`
+            })
+            let foodsHTML = foodElementList.join('')
+            document.getElementById("dbFoods").innerHTML += foodsHTML
         }
     }
 
@@ -780,4 +832,4 @@ return false;
     <!--JavaScript ends -->
 
 </body>
-</html>
+</html>handleFilter()

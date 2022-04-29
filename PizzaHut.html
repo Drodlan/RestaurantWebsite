@@ -15,7 +15,7 @@
         <nav class="navbar">
             <a class="active" href="./home.html">Home</a>
             <a href="./Popular.html">Popular</a>
-            <a href="#" onclick="openAbout()">about</a>
+            <a href="#" onclick="fetchFoods()">about</a>
             <a href="./contact.html" >Contact us</a>
            
             <a class="feed" id="feedback">feedback</a>
@@ -756,6 +756,24 @@ return false;
     function closeNav(){
         document.getElementById("about").style.width = "0%";
     }
+
+
+    async function fetchFoods() {
+        try {
+            const resp = await fetch('http://localhost:8000/api/foods/', {
+                mode: 'no-cors',
+                header: {
+                    'Access-Control-Allow-Origin':'*',
+                }
+            });
+            const data = await resp.json();
+            console.log(resp);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+
     </script>
  
      

@@ -16,7 +16,7 @@
             <a class="active" href="./home.html">Home</a>
             <a href="./Popular.html">Popular</a>
             <a href="#" onclick="openAbout()">about</a>
-            <a honload="fetchFoods()"ref="./contact.html" >Contact us</a>
+            <a href="./contact.html" >Contact us</a>
            
             <a class="feed" id="feedback">feedback</a>
             <a href="#">Orders</a>
@@ -764,6 +764,7 @@ return false;
 
     
     async function fetchFoods() {
+        document.getElementById("dbFoods").innerHTML = null
         try {
             const resp = await fetch('http://localhost:8000/api/foods/', {
                 method: 'GET',
@@ -785,7 +786,7 @@ return false;
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <span>${food.food_price}</span>
+                        <span>${food.food_price}</span>
                     <br>
                     <a href="#" class="btn">Add to cart</a>
                 </div>`
@@ -832,4 +833,4 @@ return false;
     <!--JavaScript ends -->
 
 </body>
-</html>handleFilter()
+</html>

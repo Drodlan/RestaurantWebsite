@@ -804,7 +804,7 @@ return false;
             fetchFoods()
         } else {
             document.getElementById("dbFoods").innerHTML = null
-            const foodElementList = foodsState.filter((food) => food.food_type.toLowerCase().includes(event.target.value)).map((food) => {
+            const foodElementList = foodsState.filter((food) => food.food_name.toLowerCase().includes(event.target.value)).map((food) => {
                 return `
                 <div class="box">
                     <img src="./Images/Dishes/kachi chicken biryani.jpg">

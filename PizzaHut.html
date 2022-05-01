@@ -30,7 +30,7 @@
          
         </div>
            <!-- cart -->
-           <div class="cart">
+           <div class="cart" id="cart">
             <h2 class="cart-title">Your Cart</h2>
             <!--content-->
             <div class="cart-content">
@@ -377,12 +377,12 @@
         let closecart = document.querySelector('#close-cart')
 
         //open//
-        cartIcon.onclick = () =>{
-            cart.classList.add("active");
+        document.querySelector("#cart-icon").onclick = () =>{
+            cart.classList.toggle("active");
         };
         //close//
-        closecart.onclick = () =>{
-            cart.classList.remove("active");
+        document.querySelector("#close-cart").onclick = () =>{
+            cart.classList.toggle("active");
         };
 
         //cart work
@@ -406,6 +406,12 @@
     function removeCartItem(event){
         var buttonClicked = event.target;
         buttonClicked.parentElement.remove();
+    }
+
+    //update total
+    function updatetotal() {
+        var cartContent = document.getElementsByClassName("cart-content");
+        
     }
 
 

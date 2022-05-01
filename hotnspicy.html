@@ -25,10 +25,11 @@
             <i class="fas fa-bars" id="menu-bars"></i>
             <i class="fas fa-search" id="search-icon"></i>
             <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-shopping-cart" id="carticon" onclick= "cartopen()"></a>
             <i class="fa fa-user" aria-hidden="true"></i>
             <a href="login.html" class="fas fa-sign-in-alt"></a>
-            
+        </div>
+
 <!-- cart -->
 <div class="cart">
     <h2 class="cart-title">Your Cart</h2>
@@ -53,7 +54,7 @@
     </div>
     <button type="button" class="btn-buy">Confirm Purchase</button>
     <!--cart close-->
-    <i class="fas fa-times" id="close-cart"></i>
+    <i class="fas fa-times"></i>
 
 </div>         <!-- cart -->
 
@@ -946,6 +947,8 @@ src="https://www.youtube.com/embed/zc8DJMgkQR4?autoplay=1&mute=1&loop=1&playlist
 
 <!--Java Script-->
     <script>
+
+        
         let menu = document.querySelector('#menu-bars');
         let navbar = document.querySelector('.navbar');
         
@@ -1012,16 +1015,16 @@ src="https://www.youtube.com/embed/zc8DJMgkQR4?autoplay=1&mute=1&loop=1&playlist
         document.getElementById("about").style.width = "0%";
     }
    //cart functions//
-   let cartIcon = document.querySelector('#cart-icon')
+         let cartIcon = document.querySelector('#cart-icon')
         let cart = document.querySelector('.cart')
         let closecart = document.querySelector('#close-cart')
 
         //open//
-        cartIcon.onclick = () =>{
+        function cartopen(){
             cart.classList.add("active");
         };
         //close//
-        closecart.onclick = () =>{
+        function cartclose(){
             cart.classList.remove("active");
         };
 

@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="icon" href="./Images/Restaurants/drumstick-bite1.png" type="image/icon type">
+    <link rel="icon" href=".Restaurants/drumstick-bite1.png" type="image/icon type">
 <link rel="stylesheet" href="home.css">
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body onload="start()">
 <div class="loader-container" id = "loader">
-    <img src="./Images/loader/loader2.gif">
+    <img src="./loader/loader2.gif">
     
 </div>
 
@@ -95,13 +95,9 @@
     <div class="pplr">
         <h2>Popular Dishes</h2>
 </div>
+
 <div class="table">
-    <a href="./dishes.html"><img src="./Dishes/Chicken-Biryani.jpg" height="150"><h4>Biryani</h4></a>
-    <a href="./dishes.html"><img src="./Dishes/chicken.jpeg" height="150"><h4>Chicken Lolipop</h4></a>
-    <a href="./dishes.html"><img src="./Dishes/panner tikka.jpg" height="150"><h4>Panner Tikka</h4></a>
-    <a href="./dishes.html"><img src="./Dishes/garlicprawns.jpg" height="150"><h4>Garlic Prawns</h4></a>
-    <a href="./dishes.html"><img src="./Dishes/vegpulao.jpg" height="150"><h4>Veg Pulao</h4></a>
-    <a href="./dishes.html"><img src="./Dishes/apollo fish.jpg" height="150"><h4>Apollo fish</h4></a>
+    <div id="dbFoodspplr"></div>
 </div>
  
   </div>
@@ -127,8 +123,6 @@
     <h1 class="barbeque">Restaurants</h1>
     <hr class="line"> 
     <div class="box-container">
-        <div id="dbRestaurants"></div>
-        <!--
     <div class="box">
         <a href="./PizzaHut.html"><img src="./Restaurants/Pizza_Hut_logo.svg.png"></a>
         <h3>Pizza Hut</h3>
@@ -269,7 +263,6 @@
 
         </div>
         </div>
--->
         </div>
         </section>
     
@@ -364,63 +357,37 @@
         preloader.style.display = "none";
     }
 
-
-    
-    async function fetchRestaurants() {
-              document.getElementById("dbRestaurants").innerHTML = null
+    async function fetchFoodsstarter() {
+              document.getElementById("dbFoodspplr").innerHTML = null
               try {
-                const resp = await fetch('http://localhost:8000/api/restaurants/', {
+                const resp = await fetch('http://localhost:8000/api/foods/', {
                     method: 'GET',
                     header: {
                         'Content-Type': 'application/json'
                     }
                 })
                 
-                const restaurants = await resp.json()
-                resState = restaurants
-                const restaurantElementList = restaurants.map((rest) => {
-                    return 
-                    `<div class="box">
-        <a href="${rest.restaurant_img}"></a>
-        <h3>${rest.restaurant_name}</h3>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <br>
-            <p>${rest.resturant_description}</p>
-
-        </div>
-        </div>`
-                    /*
-                    `<div class="box">
-                        <img src="${food.food_img}">
-                        <h3>${food.food_name}</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                            <span>${food.food_price}</span>
-                        <br>
-                        <a href="#" class="btn">Add to cart</a>
-                    </div>`
-                */
+                const foods = await resp.json()
+                foodsState = foods
+                const foodElementList = foods.map((food) => {
+                    if(food.food_rating == 5){
+                    return `
+                    <a href="${food.food_link}"><img src="${food.food_img}" height="150"><h4>${food.food_name}</h4></a>
+                    `
+                }
                 })
-                let restaurantsHTML = restaurantElementList.join('')
-                document.getElementById("dbRestaurants").innerHTML += restaurantsHTML
+                let foodsHTML = foodElementList.join('')
+                document.getElementById("dbFoodspplr").innerHTML += foodsHTML
                 
             } catch (err) {
                 console.log(err)
             }
         }
+
+
 function start(){
     myload();
-    fetchRestaurants();
+    fetchFoodsstarter();
 }
     </script>
     

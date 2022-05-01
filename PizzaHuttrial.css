@@ -44,7 +44,7 @@ html::-webkit-scrollbar-thumb:hover{
 header{
     position: fixed;
     top:0; left:0; right:0;
-    background: #fff;
+    background: white;
     padding:1rem 7%;
     display: flex;
     align-items: center;
@@ -57,14 +57,8 @@ header .logo{
     font-size:2.5rem;
     font-weight:bolder;
 }
-header .logo:hover{
-    color:rgb(255, 119, 0);
-}
 header .logo i{
-    color: black;
-}
-header .logo i:hover{
-    color: rgb(255, 119, 0);
+    color: orangered;
 }
 header .navbar a{
     font-size: 1.7rem;
@@ -75,8 +69,8 @@ header .navbar a{
 }
 header .navbar a.active,
 header .navbar a:hover{
-    color: white;
-    background: rgb(255, 119, 0);
+    color: #fff;
+    background: orangered;
 }
 header .icons i,
 header .icons a{
@@ -95,13 +89,140 @@ header .icons a{
 header .icons i:hover,
 header .icons a:hover{
     color: #fff;
-    background: rgb(255, 119, 0);
+    background: orangered;
     transform: rotate(360deg);
 
 }
 header .icons #menu-bars{
     display: none;
 }
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg-color);
+    box-shadow: -2px 0 4px rgb(0,0,0);
+    background: white;
+    transition: o,3s;
+
+}
+.cart.active{
+    right: 0;
+    
+}
+.cart-title{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;;
+}
+
+.cart-box{
+display: grid;
+grid-template-columns: 32% 50% 18%;
+align-items: center;
+gap: 1rem;
+margin-top: 1rem;
+}
+
+.cart-img{
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    padding: 10px;
+    
+}
+
+.details-box{
+    margin-left: 20%;
+    margin-right: -28%;
+    margin-top: 10%;
+    text-align: left;
+    display: grid;
+    row-gap: 0.2rem;
+}
+
+.cart-product-title{
+font-size: 1.55rem;
+text-transform: uppercase;
+font-weight: 600;
+}
+
+.cart-price{
+font-size: 2.3rem;
+font-weight: 300;
+}
+
+.cart-quantity{
+font-size: 1.2rem;
+border: 1px solid black;
+outline-color: black;
+width: 4rem;
+text-align: center;
+}
+
+.cart-remove{
+margin-top: 20%;
+    font-size: 20px;
+    cursor: pointer;
+}
+.cart-remove:hover{
+    font-size: 25px;
+    color: orangered;
+}
+.total{
+display: flex;
+justify-content: flex-end;
+margin-top: 1.5rem;
+border-top: 1px solid black;
+
+}
+.total-title{
+margin-right: -10%;
+font-size: 2.5rem;
+font-weight: 600;
+}
+.total-price{
+font-size: 2rem;
+margin-top: 3.5rem;
+margin-left: 0.5rem;
+}
+
+.btn-buy{
+display: flex;
+margin: 1.5rem auto 0 auto;
+padding: 12px 20px;
+border-radius: 0.5rem;
+padding: 0.5rem 1.5rem;
+border: none;
+background: var(--bg-color);
+color:var(--light-color);
+font-size: 1rem;
+font-weight: 500;
+cursor: pointer;
+font-size: 1.5rem;
+}
+.btn-buy:active,
+.btn-buy:hover{
+    color: #fff;
+    background: orangered;
+}
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+    }
+    #close-cart:hover{
+        color: orangered;
+    }
+
+
 #search-form{
     position:fixed;
     top:-110%;left:0;
@@ -168,7 +289,7 @@ ul{
     list-style: none;
 }
 
-.navbar .feed{
+ .navbar .feed{
     cursor:pointer;
 }
 
@@ -381,17 +502,16 @@ section hr{
         box-shadow: 0 20px 20px -20px #333;
         margin: -50px auto 10px;
 }
-#pizza{
+#biryani{
     display:none;
 }
-#nonpizza{
+#start{
     display:none;
 }
-#mania{
+#roti{
     display:none;
 }
-
-section .dominos{
+section .barbeque{
     text-align: center;
 
 }
@@ -402,7 +522,7 @@ section h4{
     font-size: 30px;
     color:orangered;
 }
-.veg .box-container #dbFoodsspecial{
+.barb .box-container #dbFoodsmain{
     margin: auto;
     align-items: center;
     
@@ -410,15 +530,15 @@ section h4{
     grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
     gap:5.5rem;
 }
-.nonveg .box-nonpizza #dbFoodsmain{
+.starters .box-starters #dbFoodsstart{
     margin: auto;
     align-items: center;
     
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
-    gap:5.5rem;
+    gap:1.5rem;
 }
-.pizzamania .box-mania #dbFoodsstart{
+.rotis .box-roti #dbFoodsspecial{
     margin:auto;
     align-items: center;
     
@@ -428,7 +548,7 @@ section h4{
 
 }
 
-.pizzamania .box-mania #dbFoodsstart .box{
+.rotis .box-roti #dbFoodsspecial .box{
     margin-left: 2.5rem;
     font-size: 1.2rem;
     padding:2.5rem;
@@ -441,18 +561,18 @@ section h4{
     overflow: hidden;
     text-align: center;
 }
-.pizzamania .box-mania #dbFoodsstart .box:hover{
+.rotis .box-roti #dbFoodsspecial .box:hover{
     transform : scale(1.1);
 }
-.pizzamania .box-mania #dbFoodsstart .box img{
+.rotis .box-roti #dbFoodsspecial .box img{
     height: 100%;
     width: 100%;
     border-radius: 5px;
 }
-.pizzamania .box-mania #dbFoodsstart .box span{
+.rotis .box-roti #dbFoodsspecial .box span{
     font-size: 20px;
 }
-.nonveg .box-nonpizza #dbFoodsmain .box{
+.starters .box-starters #dbFoodsstart .box{
     margin-left: 2.5rem;
     font-size: 1.2rem;
     padding:2.5rem;
@@ -465,18 +585,18 @@ section h4{
     overflow: hidden;
     text-align: center;
 }
-.nonveg .box-nonpizza #dbFoodsmain .box:hover{
+.starters .box-starters #dbFoodsstart .box:hover{
     transform: scale(1.1);
 }
-.nonveg .box-nonpizza #dbFoodsmain .box img{
+.starters .box-starters #dbFoodsstart .box img{
     height: 100%;
     width: 100%;
     border-radius: 5px;
 }
-.nonveg .box-nonpizza #dbFoodsmain .box span{
+.starters .box-starters #dbFoodsstart .box span{
     font-size: 20px;
 }
-.veg .box-container #dbFoodsspecial .box{
+.barb .box-container #dbFoodsmain .box{
     margin-left: 2.5rem;
     font-size: 1.2rem;
     padding:2.5rem;
@@ -490,16 +610,16 @@ section h4{
     text-align: center;
     
 }
-.veg .box-container #dbFoodsspecial .box:hover{
+.barb .box-container #dbFoodsmain .box:hover{
     transform: scale(1.1);
 }
-.veg .box-container #dbFoodsspecial .box img{
+.barb .box-container #dbFoodsmain .box img{
     height: 100%;
     width: 100%;
     border-radius: 5px;
     
 }
-.veg .box-container #dbFoodsspecial .box span{
+.barb .box-container #dbFoodsmain .box span{
     font-size: 20px;
 }
 
@@ -513,8 +633,7 @@ section h4{
     cursor: pointer;
     padding: .8rem 3rem;
     color:white;
-}
-.sidebar{
+}.sidebar{
     margin-top: 65px;
     position:fixed;
     width: 200px;
@@ -577,7 +696,7 @@ section h4{
     padding-bottom: 50px;
     
 }
-.home .veg .glow{
+.home .barb .glow{
     
         font-size: 80px;
         color:black;
@@ -601,7 +720,23 @@ section h4{
     border-radius: 10px;
     
 }
+.cart{
+    margin-left: 80px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    font-size: 35px;
+    box-shadow: var(--box-shadow);
 
+}
+.table-cart tr th{
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 18px;
+    width: 100%;
+}
+.table-cart tr td{
+    font-size: 15px;
+}
 .about{
     height: 100%;
     width: 0;
@@ -675,6 +810,7 @@ section h4{
 
 
 
+
 /*media queries*/
 
 @media (max-width:991px){
@@ -687,9 +823,7 @@ section h4{
     section{
         padding: 1rem 2rem;
     }
-    footer{
-        padding: 1rem 2rem;
-    }
+
 
 }
 @media (max-width:768px){
@@ -716,79 +850,13 @@ section h4{
         font-size:2rem;
         background: #eee;
     }
-    .footer{
-        background: #24262b;
-        padding: 50px 0;
-    }
-    .footer-col h4{
-        cursor: default;
-        font-size: 11.5pt;
-        font-weight: normal;
-        color: orangered;
-        padding-bottom: 10px;
-    }
-    .footer-col ul a
-{
-    font-size:25px;
-    color:orangered;
-}
-.footer-col ul i{
-    font-size:25px;
-    color:orangered;
-}
-.footer-col ul span{
-    cursor:pointer;
-    font-size:20px;
-    font-weight:bold;
-    color:white;
-}
-
-.map ul a{
-    margin-left: 10px;
-    font-size: 15px;
-    color:white;
-}
-.footer-col .mail ul i{
-    padding-top: 20px;
-    
-    font-size:25px;
-}
-.footer-col .mail span{
-    
-    padding-left: 3px;
-    font-size: 12px;
-    font-weight: normal;
-}
-.footer-col .map ul i{
-    padding-top:20px;
-    font-size: 20px;
-}
-.footer-col .map span{
-    font-weight: normal;
-    font-size:12px;
-    margin-left: 15px;
-    margin-top: auto;
-    margin-bottom: auto;
-    color:white;
-    
-}
-.footer-col ul li a{
-    line-height: 1.6;
-    font-size:12px;
-    text-decoration: none;
-    color:white;
-    
-}
-.home .veg h2 img{
+.home .barb h2 img{
     margin: auto;
     
 }
 .home .cont iframe{
     width: 400px;
 }
-
-
-
     
 }
 @media (max-width: 991px){

@@ -7,11 +7,12 @@
     <title>Pizza Hut</title>
     <link rel="icon" href="./Restaurants/drumstick-bite1.png" type="image/icon type">
 <link rel="stylesheet" href="PizzaHut.css">
-<script src="https://kit.fontawesome.com/a076d05399.js" ></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body onload="start()">
+    <!--Header section start-->
     <header>
-        <a href="#" class="logo"><i class="fa fa-drumstick-bite"></i>GetSnack'd</a>
+        <a href="./home.html" class="logo"><i class="fa fa-drumstick-bite"></i>GetSnack'd</a>
         <nav class="navbar">
             <a class="active" href="./home.html">Home</a>
             <a href="#" onclick="openAbout()">about</a>
@@ -23,42 +24,24 @@
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
             <i class="fas fa-search" id="search-icon"></i>
-            <i class="fas fa-shopping-cart" id="cart-icon"></i>
+            <a href="#" class="fas fa-shopping-cart"></a>
             <i class="fa fa-user" aria-hidden="true"></i>
             <a href="login.html" class="fas fa-sign-in-alt"></a>
             
-         
         </div>
-           <!-- cart -->
-           <div class="cart" id="cart">
-            <h2 class="cart-title">Your Cart</h2>
-            <!--content-->
-            <div class="cart-content">
 
-                <div class="cart-box">
-                    <img src=./pizza/sausage4cheez.jpg alt="" class="cart-img">
-                    <div class="details-box">
-                         <div class="cart-product-title">Sausage 4 Cheese</div>
-                         <div class="cart-price">Tk 489</div>
-                        <input type="number" value="1" class="cart-quantity">
-                    </div>
-                <!--remove cart-->
-                <i class="fa fa-trash cart-remove"></i>
-                </div>
-            </div>
-
-            <div class="total">
-                <div class="total-title">Total</div>
-                <div class="total-price">$o</div>
-            </div>
-            <button type="button" class="btn-buy">Confirm Purchase</button>
-            <!--cart close-->
-            <i class="fas fa-times" id="close-cart"></i>
-
-        </div>         <!-- cart -->
-
+         <!--search form-->
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close1"></i>
+    </form>
+    <!--Search Form ends-->
     </header>
-    <div class="back">
+
+<!--Rating Form starts-->
+
+<div class="back">
     <div class="container1" id="co1">
         <div class="post">
             <div class="text">Thanks for Rating us!</div>
@@ -97,52 +80,55 @@
 
 <nav class="sidebar">
     <div class="text">
-    <a href="./PizzaHut.html"><i class="fa fa-home"></i></a>
+    <a href="./dominos.html"><i class="fa fa-home"></i></a>
     <ul>
-        <li><a href="#start" onclick="myfunction()">Starters</a></li>
-        <li><a href="#biryani" onclick="myfun()">Pizza</a></li>
-        <li><a href="#roti" onclick="myroti()">Pasta</a></li>
+        <li><a href="#Mania" onclick="myroti()">Starters</a></li>
+        <li><a href="#nonpizza" onclick="myfunction()">Pizza</a></li>
+        <li><a href="#pizza" onclick="myfun()">Pasta</a></li>
+
     </ul>
 </div>
 </nav>
 <!--Side bar ends-->
 <section class="home" id="home">
     <div class="barb">
-        <h2><img src="./Restaurants/Pizza_Hut_logo.svg.png" height="350"></h2>
-        <div class="cont">
-            <iframe width="923" height="519" src="https://www.youtube.com/embed/BrcpkSBx00M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h2><img src="./Restaurants/Pizza_Hut_logo.svg.png" height="350"></h2>
+    <div class="cont">
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/BrcpkSBx00M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
         </div>
- 
-    </div>
-</section> 
+        </div>
+</section>
 
-<section class="starters" id="start">
-    <h2 class="barbeque">Pizza Hut</h2>
+<section class="pizzamania" id="mania">
+    <h2 class="dominos">Pizza Hut</h2>
     <hr class="line">
     <h4>Starters</h4> 
-    <div class="box-starters">
+    <div class="box-mania">
         <div id="dbFoodsstart"></div>
     </div>
 </section>
 
-<section class="barb" id="biryani">
-    <h2 class="barbeque">Pizza Hut</h2>
+<section class="nonveg" id="nonpizza">
+    <h2 class="dominos">Pizza Hut</h2>
     <hr class="line">
-    <h4>Pizza</h4>  
-    <div class="box-container">
+    <h4>Pizza</h4> 
+    <div class="box-nonpizza">
         <div id="dbFoodsmain"></div>
-    </div>
+</div>
 </section>
 
-<section class="rotis" id="roti">
-    <h2 class="barbeque">Pizza Hut</h2>
+<section class="veg" id="pizza">
+    <h2 class="dominos">Pizza Hut</h2>
     <hr class="line">
-    <h4>Pasta</h4> 
-    <div class="box-roti">
+    <h4>Pasta</h4>  
+    <div class="box-container">
         <div id="dbFoodsspecial"></div>
     </div>
+    
 </section>
-
+<!--Footer Section-->
 <div id="about" class="about">
     <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="about-overlay">
@@ -156,18 +142,14 @@
     </div>
 </div>
 
-
-
-
 <!--Home  ends-->
 
 
 <!--Java Script-->
     <script>
-        let foodsState = null
         let menu = document.querySelector('#menu-bars');
         let navbar = document.querySelector('.navbar');
-
+        
         menu.onclick = () => {
             menu.classList.toggle('fa-times');
             navbar.classList.toggle('active');
@@ -181,7 +163,7 @@
         }
         document.querySelector('#close1').onclick=() => {
             document.querySelector('#search-form').classList.toggle('active');
-    }
+        }
         document.querySelector("#feedback").onclick=() =>{
         document.querySelector("#co1").classList.toggle("active");
     }
@@ -190,25 +172,19 @@
 
     }
     function myfun(){
-        document.getElementById("biryani").style.display="block";
+        document.getElementById("pizza").style.display="block";
     }
     function myfunction(){
-        document.getElementById("start").style.display="block";
+        document.getElementById("nonpizza").style.display="block";
     }
     function myroti(){
-        document.getElementById("roti").style.display="block";
-    }
-    function increment() {
-        document.getElementById('demoInput').stepUp();
-    }
-    function decrement() {
-        document.getElementById('demoInput').stepDown();
+        document.getElementById("mania").style.display="block";
     }
         const btn = document.querySelector("button");
         const post = document.querySelector(".post");
         const widget = document.querySelector(".star-widget");
         const editBtn = document.querySelector(".edit");
-
+    
         btn.onclick = () =>{
         widget.style.display = "none";
         post.style.display = "block";
@@ -217,17 +193,16 @@
             post.style.display = "none";
         }
         return false;
-        }
+    }
         function openAbout(){
-            document.getElementById("about").style.width = "100%";
+        document.getElementById("about").style.width = "100%";
 
-        }
-        function closeNav(){
-            document.getElementById("about").style.width = "0%";
-        }
-
-            
-       async function fetchFoodsstarter(type) {
+    }
+    function closeNav(){
+        document.getElementById("about").style.width = "0%";
+    }
+   
+    async function fetchFoodsstarter(type) {
               document.getElementById("dbFoodsstart").innerHTML = null
               try {
                 const resp = await fetch('http://localhost:8000/api/foods/', {
@@ -343,90 +318,13 @@
                 console.log(err)
             }
         }
-        /*
-        function handleFilter(event) {
-            if(event.target.value.length <= 0){
-                fetchFoods()
-            } else {
-                document.getElementById("dbFoods").innerHTML = null
-                const foodElementList = foodsState.filter((food) => food.food_name.toLowerCase().includes(event.target.value)).map((food) => {
-                    return `
-                    <div class="box">
-                        <img src="./Images/Dishes/kachi chicken biryani.jpg">
-                        <h3>${food.food_name}</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span>${food.food_price}</span>
-                        <br>
-                        <a href="#" class="btn">Add to cart</a>
-                    </div>`
-                })
-                let foodsHTML = foodElementList.join('')
-                document.getElementById("dbFoods").innerHTML += foodsHTML
-            }
-        }
-*/
-        //cart functions//
-        let cartIcon = document.querySelector('#cart-icon')
-        let cart = document.querySelector('.cart')
-        let closecart = document.querySelector('#close-cart')
 
-        //open//
-        document.querySelector("#cart-icon").onclick = () =>{
-            cart.classList.toggle("active");
-        };
-        //close//
-        document.querySelector("#close-cart").onclick = () =>{
-            cart.classList.toggle("active");
-        };
-
-        //cart work
-    if(document.readyState == "loading"){
-        document.addEventListener("DOMContentLoaded", ready);
-    } else {
-        ready();
-    }
-
-    //makingfunction
-    function ready(){
-        //removee
-        var removeCartButtons = document.getElementsByClassName('cart-remove')
-        console.log(removeCartButtons)
-        for (var i=0; i < removeCartButtons.length; i++){
-            var button = removeCartButtons[i]
-            button.addEventListener("click", removeCartItem);
-        }
-    }
-    // remove item from cart
-    function removeCartItem(event){
-        var buttonClicked = event.target;
-        buttonClicked.parentElement.remove();
-    }
-
-    //update total
-    function updatetotal() {
-        var cartContent = document.getElementsByClassName("cart-content");
-        
-    }
-
-
-
-    //cart functions//
-
-
-    function start(){
+        function start(){
         fetchFoodsstarter("STARTERS");
         fetchFoodsmain("MAINS");
         fetchFoodsspecial("SPECIAL");
     }
     </script>
- 
-     
     <!--JavaScript ends -->
 
 </body>

@@ -40,7 +40,7 @@ html::-webkit-scrollbar-thumb{
     border-radius: 5px;
 }
 html::-webkit-scrollbar-thumb:hover{
-    background:orangered;
+    background:;
 }
 header{
     position: fixed;
@@ -59,7 +59,7 @@ header .logo{
     font-weight:bolder;
 }
 header .logo i{
-    color: orangered;
+    color: ;
 }
 header .navbar a{
     font-size: 1.7rem;
@@ -71,7 +71,7 @@ header .navbar a{
 header .navbar a.active,
 header .navbar a:hover{
     color: #fff;
-    background: orangered;
+    background: ;
 }
 header .icons i,
 header .icons a{
@@ -90,7 +90,7 @@ header .icons a{
 header .icons i:hover,
 header .icons a:hover{
     color: #fff;
-    background: orangered;
+    background: ;
     transform: rotate(360deg);
 
 }
@@ -133,7 +133,7 @@ header .icons #menu-bars{
     font-size:3rem;
 }
 #search-form label:hover{
-    color:orangered;
+    color:;
 
 }
 #search-form #close1{
@@ -177,7 +177,7 @@ ul{
     cursor: default;
     font-size: 13.5pt;
     font-weight: normal;
-    color: orangered;
+    color: ;
     padding-bottom: 10px;
 
 }
@@ -185,11 +185,11 @@ ul{
 .footer-col ul a
 {
     font-size:25px;
-    color:orangered;
+    color:;
 }
 .footer-col ul i{
     font-size:35px;
-    color:orangered;
+    color:;
 }
 .footer-col ul span{
     cursor:pointer;
@@ -198,7 +198,7 @@ ul{
     color:white;
 }
 .footer-col ul span:hover{
-    color:orangered;
+    color:;
 }
 .map ul a{
     margin-left: 10px;
@@ -237,7 +237,7 @@ ul{
     
 }
 .footer-col ul li a:hover{
-    color:orangered;
+    color:;
 }
 .footer .social-links a,
 .footer .social-links i{
@@ -287,7 +287,7 @@ ul{
 }
 .container1 .edit:hover{
     text-decoration:underline;
-    color: orangered;
+    color: ;
 }
 .container1 .star-widget input{
     display:none;
@@ -391,7 +391,7 @@ form .btn button{
     transition: all 0.3s ease;
 }
 form .btn button:hover{
-    background: orangered;
+    background: ;
 }
 .icon{
     cursor: pointer;
@@ -433,7 +433,7 @@ form .btn button:hover{
     font-size:3rem;
 }
 #co1 label:hover{
-    color:orangered;
+    color:;
 
 }
 #co1 #close{
@@ -494,7 +494,7 @@ section .hitech{
 section h4{
     margin-left: 105px;
     font-size: 30px;
-    color:orangered;
+    color:;
 }
 .meh .box-container{
     margin: auto;
@@ -706,7 +706,7 @@ section h4{
     margin-top: 1rem;
     font-size: 1.4rem;
     text-decoration: none;
-    background: orangered;
+    background: ;
     border-radius: .5rem;
     cursor: pointer;
     padding: .8rem 3rem;
@@ -744,7 +744,7 @@ section h4{
     
 }
 .sidebar .text i:hover{
-    color:orangered;
+    color:;
 }
 .sidebar ul{
     background: white;
@@ -770,12 +770,12 @@ section h4{
 
 }
 .sidebar ul li a:hover{
-    color: orangered;
+    color: ;
     background:rgb(216, 216, 216);
     border-top-left-radius: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    border-left: 10px solid orangered;
+    border-left: 10px solid ;
     
 }
 .home{
@@ -933,17 +933,17 @@ section h4{
         cursor: default;
         font-size: 11.5pt;
         font-weight: normal;
-        color: orangered;
+        color: ;
         padding-bottom: 10px;
     }
     .footer-col ul a
 {
     font-size:25px;
-    color:orangered;
+    color:;
 }
 .footer-col ul i{
     font-size:25px;
-    color:orangered;
+    color:;
 }
 .footer-col ul span{
     cursor:pointer;

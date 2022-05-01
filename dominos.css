@@ -44,7 +44,7 @@ html::-webkit-scrollbar-thumb:hover{
 header{
     position: fixed;
     top:0; left:0; right:0;
-    background: white;
+    background: #fff;
     padding:1rem 7%;
     display: flex;
     align-items: center;
@@ -57,8 +57,14 @@ header .logo{
     font-size:2.5rem;
     font-weight:bolder;
 }
+header .logo:hover{
+    color:rgb(255, 119, 0);
+}
 header .logo i{
-    color: orangered;
+    color: black;
+}
+header .logo i:hover{
+    color: rgb(255, 119, 0);
 }
 header .navbar a{
     font-size: 1.7rem;
@@ -69,8 +75,8 @@ header .navbar a{
 }
 header .navbar a.active,
 header .navbar a:hover{
-    color: #fff;
-    background: orangered;
+    color: white;
+    background: rgb(255, 119, 0);
 }
 header .icons i,
 header .icons a{
@@ -89,7 +95,7 @@ header .icons a{
 header .icons i:hover,
 header .icons a:hover{
     color: #fff;
-    background: orangered;
+    background: rgb(255, 119, 0);
     transform: rotate(360deg);
 
 }
@@ -160,94 +166,8 @@ header .icons #menu-bars{
 }
 ul{
     list-style: none;
-}.footer{
-    margin-left: auto;
-    background: #24262b;
-    padding: 70px 0;
-    
-}
-.footer-col{
-    width: 25%;
-    height: 140px;
-    padding: 0 10px;
-}
-.footer-col h4{
-    cursor: default;
-    font-size: 13.5pt;
-    font-weight: normal;
-    color: orangered;
-    padding-bottom: 10px;
-
 }
 
-.footer-col ul a
-{
-    font-size:25px;
-    color:orangered;
-}
-.footer-col ul i{
-    font-size:35px;
-    color:orangered;
-}
-.footer-col ul span{
-    cursor:pointer;
-    font-size:35px;
-    font-weight:bold;
-    color:white;
-}
-.footer-col ul span:hover{
-    color:orangered;
-}
-.map ul a{
-    margin-left: 10px;
-    font-size: 15px;
-    color:white;
-}
-.footer-col .mail ul i{
-    padding-top: 20px;
-    
-    font-size:25px;
-}
-.footer-col .mail span{
-    
-    padding-left: 15px;;
-    font-size: 13px;
-    font-weight: normal;
-}
-.footer-col .map ul i{
-    padding-top:30px;
-    font-size: 25px;
-}
-.footer-col .map span{
-    font-weight: normal;
-    font-size:13px;
-    margin-left: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
-    color:white;
-    
-}
-.footer-col ul li a{
-    line-height: 1.6;
-    font-size:11pt;
-    text-decoration: none;
-    color:white;
-    
-}
-.footer-col ul li a:hover{
-    color:orangered;
-}
-.footer .social-links a,
-.footer .social-links i{
-    margin-left: 0.5rem;
-    text-align: center;
-    font-size: 2.4rem;
-    height: 35px;
-    width: 45px;
-    color:white;
-    border-radius:50%;
-    
-}
 .navbar .feed{
     cursor:pointer;
 }
@@ -470,9 +390,7 @@ section hr{
 #mania{
     display:none;
 }
-#curry{
-    display:none;
-}
+
 section .dominos{
     text-align: center;
 
@@ -484,7 +402,7 @@ section h4{
     font-size: 30px;
     color:orangered;
 }
-.veg .box-container{
+.veg .box-container #dbFoodsspecial{
     margin: auto;
     align-items: center;
     
@@ -492,7 +410,7 @@ section h4{
     grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
     gap:5.5rem;
 }
-.nonveg .box-nonpizza{
+.nonveg .box-nonpizza #dbFoodsmain{
     margin: auto;
     align-items: center;
     
@@ -500,7 +418,7 @@ section h4{
     grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
     gap:5.5rem;
 }
-.pizzamania .box-mania{
+.pizzamania .box-mania #dbFoodsstart{
     margin:auto;
     align-items: center;
     
@@ -509,16 +427,8 @@ section h4{
     gap:5.5rem;
 
 }
-.currys .box-curry{
-    margin:auto;
-    align-items: center;
-    
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
-    gap:5.5rem;
 
-}
-.currys .box-curry .box{
+.pizzamania .box-mania #dbFoodsstart .box{
     margin-left: 2.5rem;
     font-size: 1.2rem;
     padding:2.5rem;
@@ -530,20 +440,19 @@ section h4{
     position: relative;
     overflow: hidden;
     text-align: center;
-
 }
-.currys .box-curry .box:hover{
+.pizzamania .box-mania #dbFoodsstart .box:hover{
     transform : scale(1.1);
 }
-.currys .box-curry .box img{
+.pizzamania .box-mania #dbFoodsstart .box img{
     height: 100%;
     width: 100%;
     border-radius: 5px;
 }
-.currys .box-curry .box span{
+.pizzamania .box-mania #dbFoodsstart .box span{
     font-size: 20px;
 }
-.pizzamania .box-mania .box{
+.nonveg .box-nonpizza #dbFoodsmain .box{
     margin-left: 2.5rem;
     font-size: 1.2rem;
     padding:2.5rem;
@@ -556,42 +465,18 @@ section h4{
     overflow: hidden;
     text-align: center;
 }
-.pizzamania .box-mania .box:hover{
-    transform : scale(1.1);
-}
-.pizzamania .box-mania .box img{
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-}
-.pizzamania .box-mania .box span{
-    font-size: 20px;
-}
-.nonveg .box-nonpizza .box{
-    margin-left: 2.5rem;
-    font-size: 1.2rem;
-    padding:2.5rem;
-    align-items: center;
-    background: #fff;
-    border-radius: .5rem;
-    border: .1rem solid rgba(0,0,0,.2);
-    box-shadow: var(--box-shadow);
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
-.nonveg .box-nonpizza .box:hover{
+.nonveg .box-nonpizza #dbFoodsmain .box:hover{
     transform: scale(1.1);
 }
-.nonveg .box-nonpizza .box img{
+.nonveg .box-nonpizza #dbFoodsmain .box img{
     height: 100%;
     width: 100%;
     border-radius: 5px;
 }
-.nonveg .box-nonpizza .box span{
+.nonveg .box-nonpizza #dbFoodsmain .box span{
     font-size: 20px;
 }
-.veg .box-container .box{
+.veg .box-container #dbFoodsspecial .box{
     margin-left: 2.5rem;
     font-size: 1.2rem;
     padding:2.5rem;
@@ -605,16 +490,16 @@ section h4{
     text-align: center;
     
 }
-.veg .box-container .box:hover{
+.veg .box-container #dbFoodsspecial .box:hover{
     transform: scale(1.1);
 }
-.veg .box-container .box img{
+.veg .box-container #dbFoodsspecial .box img{
     height: 100%;
     width: 100%;
     border-radius: 5px;
     
 }
-.veg .box-container .box span{
+.veg .box-container #dbFoodsspecial .box span{
     font-size: 20px;
 }
 
@@ -689,6 +574,7 @@ section h4{
 }
 .home{
     text-align: center;
+    padding-bottom: 50px;
     
 }
 .home .veg .glow{

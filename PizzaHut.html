@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="PizzaHut.css">
 <script src="https://kit.fontawesome.com/a076d05399.js" ></script>
 </head>
-<body onload="fetchFoods()">
+<body onload="start()">
     <header>
         <a href="#" class="logo"><i class="fa fa-drumstick-bite"></i>GetSnack'd</a>
         <nav class="navbar">
@@ -481,7 +481,7 @@
     <h4>Pizza</h4>  
     <div class="box-container">
     <div class="box">
-        <img src="./Images/Dishes/pizza/classic4cheez.jpg">
+        <img src="./Dishes/pizza/classic4cheez.jpg">
         <h3>Classic 4 Cheese</h3>
         <div class="stars">
             <i class="fas fa-star"></i>
@@ -896,6 +896,10 @@
 
     //cart functions//
 
+
+    function start(){
+        fetchFoods();
+    }
     </script>
  
      

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KFC</title>
     <link rel="icon" href="./Restaurants/drumstick-bite1.png" type="image/icon type">
-<link rel="stylesheet" href="kfc.css">
+<link rel="stylesheet" href="takeout.css">
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body onload="start()">
@@ -80,7 +80,7 @@
 
 <nav class="sidebar">
     <div class="text">
-    <a href="./kfc.html"><i class="fa fa-home"></i></a>
+    <a href="./takeout.html"><i class="fa fa-home"></i></a>
     <ul>
         <li><a href="#Mania" onclick="myroti()">Starters</a></li>
         <li><a href="#nonpizza" onclick="myfunction()">Burgers</a></li>
@@ -92,11 +92,10 @@
 <!--Side bar ends-->
 <section class="home" id="home">
     <div class="barb">
-    <h2><img src="./Restaurants/kfc.png" height="350"></h2>
+    <h2><img src="./Restaurants/takeout.jpg" height="350"></h2>
     <div class="cont">
         <iframe width="420" height="315"
-        src="https://www.youtube.com/embed/Rlwd54aWXJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
+        src="https://www.youtube.com/embed/Ip0tlyXBmE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         </div>
 </section>
@@ -215,7 +214,7 @@
                 const foods = await resp.json()
                 foodsState = foods
                 const foodElementList = foods.map((food) => {
-                    if(type == food.food_type && food.restaurant == 2){
+                    if(type == food.food_type && food.restaurant == 4){
                     return `
                     <div class="box">
                         <img src="${food.food_img}">
@@ -247,7 +246,7 @@
                 const foods = await resp.json()
                 foodsState = foods
                 const foodElementList = foods.map((food) => {
-                    if(type == food.food_type && food.restaurant == 2){
+                    if(type == food.food_type && food.restaurant == 4){
                     return `
                     <div class="box">
                         <img src="${food.food_img}">
@@ -279,7 +278,7 @@
                 const foods = await resp.json()
                 foodsState = foods
                 const foodElementList = foods.map((food) => {
-                    if(type == food.food_type && food.restaurant == 2){
+                    if(type == food.food_type && food.restaurant == 4){
                     return `
                     <div class="box">
                         <img src="${food.food_img}">

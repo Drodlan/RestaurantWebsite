@@ -596,9 +596,6 @@ section hr{
 #roti{
     display:none;
 }
-#curry{
-    display:none;
-}
 section .barbeque{
     text-align: center;
 
@@ -610,7 +607,7 @@ section h4{
     font-size: 30px;
     color:orangered;
 }
-.barb .box-container{
+.barb .box-container #dbFoodsmain{
     margin: auto;
     align-items: center;
     
@@ -618,7 +615,7 @@ section h4{
     grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
     gap:5.5rem;
 }
-.starters .box-starters #dbFoods{
+.starters .box-starters #dbFoodsstart{
     margin: auto;
     align-items: center;
     
@@ -626,7 +623,7 @@ section h4{
     grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
     gap:1.5rem;
 }
-.rotis .box-roti{
+.rotis .box-roti #dbFoodsspecial{
     margin:auto;
     align-items: center;
     
@@ -635,16 +632,8 @@ section h4{
     gap:5.5rem;
 
 }
-.currys .box-curry{
-    margin:auto;
-    align-items: center;
-    
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
-    gap:5.5rem;
 
-}
-.currys .box-curry .box{
+.rotis .box-roti #dbFoodsspecial .box{
     margin-left: 2.5rem;
     font-size: 1.2rem;
     padding:2.5rem;
@@ -656,20 +645,19 @@ section h4{
     position: relative;
     overflow: hidden;
     text-align: center;
-
 }
-.currys .box-curry .box:hover{
+.rotis .box-roti #dbFoodsspecial .box:hover{
     transform : scale(1.1);
 }
-.currys .box-curry .box img{
+.rotis .box-roti #dbFoodsspecial .box img{
     height: 100%;
     width: 100%;
     border-radius: 5px;
 }
-.currys .box-curry .box span{
+.rotis .box-roti #dbFoodsspecial .box span{
     font-size: 20px;
 }
-.rotis .box-roti .box{
+.starters .box-starters #dbFoodsstart .box{
     margin-left: 2.5rem;
     font-size: 1.2rem;
     padding:2.5rem;
@@ -682,42 +670,18 @@ section h4{
     overflow: hidden;
     text-align: center;
 }
-.rotis .box-roti .box:hover{
-    transform : scale(1.1);
-}
-.rotis .box-roti .box img{
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-}
-.rotis .box-roti .box span{
-    font-size: 20px;
-}
-.starters .box-starters #dbFoods .box{
-    margin-left: 2.5rem;
-    font-size: 1.2rem;
-    padding:2.5rem;
-    align-items: center;
-    background: #fff;
-    border-radius: .5rem;
-    border: .1rem solid rgba(0,0,0,.2);
-    box-shadow: var(--box-shadow);
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
-.starters .box-starters #dbFoods .box:hover{
+.starters .box-starters #dbFoodsstart .box:hover{
     transform: scale(1.1);
 }
-.starters .box-starters #dbFoods .box img{
+.starters .box-starters #dbFoodsstart .box img{
     height: 100%;
     width: 100%;
     border-radius: 5px;
 }
-.starters .box-starters #dbFoods .box span{
+.starters .box-starters #dbFoodsstart .box span{
     font-size: 20px;
 }
-.barb .box-container .box{
+.barb .box-container #dbFoodsmain .box{
     margin-left: 2.5rem;
     font-size: 1.2rem;
     padding:2.5rem;
@@ -731,16 +695,16 @@ section h4{
     text-align: center;
     
 }
-.barb .box-container .box:hover{
+.barb .box-container #dbFoodsmain .box:hover{
     transform: scale(1.1);
 }
-.barb .box-container .box img{
+.barb .box-container #dbFoodsmain .box img{
     height: 100%;
     width: 100%;
     border-radius: 5px;
     
 }
-.barb .box-container .box span{
+.barb .box-container #dbFoodsmain .box span{
     font-size: 20px;
 }
 

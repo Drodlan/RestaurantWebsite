@@ -13,5 +13,7 @@ my kit.fantawesome.js file kept getting blocked and turning off, thus the missin
 
 chrome CORS extension: https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en
 
+kit.fontawesome link: <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 Rushnan Lateef
 17241011

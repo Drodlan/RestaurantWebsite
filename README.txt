@@ -9,4 +9,9 @@ runserver: python manage.py runserver
 
 I faced a CORS issue which I dealt with via a CORS chrome extension, of which I have included as well.
 
-my kit.fantawesome.js file kept getting blocked and turning off, thus the missing icons.
+my kit.fantawesome.js file kept getting blocked and turning off, thus the missing icons. Sometimes they are there, sometimes not.
+
+chrome CORS extension: https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en
+
+Rushnan Lateef
+17241011
